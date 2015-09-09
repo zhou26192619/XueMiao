@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/comment_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/view_main_head" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/comment_divider_size"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="@dimen/comment_padding_left"
+        android:paddingRight="@dimen/comment_padding_right"
+        android:paddingTop="8dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="你当前的地址"
+            android:textSize="@dimen/text_big" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/set_address_ll_loc_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="@dimen/comment_padding_left"
+        android:paddingRight="@dimen/comment_padding_right"
+        android:paddingTop="8dp" >
+
+        <ImageView
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:src="@mipmap/address" />
+
+        <TextView
+            android:id="@+id/set_address_tv_loc_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="定位中···"
+            android:textSize="@dimen/text_big" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/comment_padding_left"
+        android:paddingRight="@dimen/comment_padding_right" >
+
+        <Spinner
+            android:id="@+id/set_address_sp_province"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/set_address_sp_city"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/set_address_sp_area"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="@dimen/comment_divider_size"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/comment_padding_left"
+        android:paddingRight="@dimen/comment_padding_right" >
+
+        <EditText
+            android:id="@+id/set_address_et_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="详细地址"
+            android:textColorHint="@color/text_gray"
+            android:textSize="@dimen/text_normal" />
+    </LinearLayout>
+
+</LinearLayout>

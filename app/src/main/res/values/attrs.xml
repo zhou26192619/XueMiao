@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="HMCommentTag">
+        <attr name="type" format="enum">
+            <enum name="big_tag" value="0"/>
+            <enum name="small_tag" value="1"/>
+        </attr>
+        <attr name="tag_name" format="string"></attr>
+    </declare-styleable>
+
+</resources>

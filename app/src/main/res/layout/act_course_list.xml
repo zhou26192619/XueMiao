@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cc.xuemiao.ui.view.HeadView
+        android:id="@+id/headView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_h"
+        android:background="@color/head_bg" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView xmlns:hm="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/course_list_ptrlv_courses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/rectangle_organization_divider"
+        android:listSelector="@android:color/transparent"
+        hm:ptrHeaderTextAppearance="@style/pull_to_refresh_header_text_dark_style" />
+
+</LinearLayout>

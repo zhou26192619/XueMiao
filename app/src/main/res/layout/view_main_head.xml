@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/head_h"
+    android:background="@color/head_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="1.5dp"
+    android:paddingRight="1.5dp">
+
+    <RelativeLayout
+        android:id="@+id/common_head_rl_back"
+        android:layout_width="45dp"
+        android:layout_height="45dp">
+
+        <TextView
+            android:id="@+id/common_head_tv_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="13.5dp"
+            android:background="@mipmap/arrow_left_white" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/common_head_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="标题"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:id="@+id/common_head_rl_right_icon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/common_head_tv_right_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="13.5dp"
+            android:background="@mipmap/finish" />
+    </RelativeLayout>
+
+</LinearLayout>

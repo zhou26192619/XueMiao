@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/overlay_click_ll_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/orange_border_rounded_corner"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/common_padding_bottom"
+    android:paddingLeft="@dimen/common_padding_top"
+    android:paddingRight="@dimen/common_padding_top"
+    android:paddingTop="@dimen/common_padding_top" >
+
+    <TextView
+        android:id="@+id/overlay_click_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lines="1"
+        android:maxWidth="200dp"
+        android:textColor="@color/text_dark_gray"
+        android:textSize="@dimen/text_big" />
+
+    <TextView
+        android:id="@+id/overlay_click_tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxWidth="200dp"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/text_normal" />
+
+</LinearLayout>

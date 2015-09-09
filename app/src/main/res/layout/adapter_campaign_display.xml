@@ -1,0 +1,200 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/campaign_display_ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/campaign_display_iv_logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/campaign_display_iv_type"
+            android:layout_width="70dp"
+            android:layout_height="53dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" />
+
+        <LinearLayout
+            android:id="@+id/campaign_display_ll_name"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_above="@+id/campaign_display_ll_tags"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="@dimen/comment_padding_left"
+            android:background="@drawable/black_alpha_corner"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/presenter_white" />
+
+            <TextView
+                android:id="@+id/campaign_display_tv_org_name"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="3dp"
+                android:gravity="center_vertical"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/campaign_display_ll_tags"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="@dimen/comment_padding_left"
+            android:background="@drawable/black_alpha_corner"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/tag" />
+
+            <TextView
+                android:id="@+id/campaign_display_tv_tags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_small" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/campaign_display_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingBottom="@dimen/common_padding_bottom"
+        android:paddingLeft="@dimen/comment_padding_left"
+        android:paddingRight="@dimen/comment_padding_right"
+        android:paddingTop="@dimen/common_padding_top"
+        android:textColor="@color/black_deep"
+        android:textSize="@dimen/text_normal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/comment_padding_left"
+        android:paddingRight="@dimen/comment_padding_right">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/halving_line_dot" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/common_divider_block_size"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/common_padding_bottom"
+        android:paddingLeft="@dimen/comment_padding_left"
+        android:paddingRight="@dimen/comment_padding_right"
+        android:paddingTop="@dimen/common_padding_top">
+
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@mipmap/address"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/campaign_display_tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="2.5km"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text_small"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@mipmap/clock_gray" />
+
+        <TextView
+            android:id="@+id/campaign_display_tv_time_info"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="周六 05.18"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text_small" />
+
+        <TextView
+            android:id="@+id/campaign_display_tv_sign_up_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="0"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/text_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="人已报名"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text_small" />
+
+        <TextView
+            android:id="@+id/campaign_display_tv_surplus_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="0"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/text_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="剩余名额"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text_small" />
+    </LinearLayout>
+
+</LinearLayout>

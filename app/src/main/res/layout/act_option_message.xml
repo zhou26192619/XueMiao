@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/comment_bg"
+    android:orientation="vertical" >
+
+    <cc.xuemiao.ui.view.HeadView
+        android:id="@+id/headView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_h"
+        android:background="@color/head_bg" />
+
+    <LinearLayout
+        android:id="@+id/option_message_ll_message_remind"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/white_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/comment_padding_left"
+        android:paddingRight="@dimen/comment_padding_right" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="接收消息提醒"
+            android:textSize="@dimen/text_big" />
+
+        <CheckBox
+            android:id="@+id/option_message_cb_message_remind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/option_message_ll_voice"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/comment_divider_size"
+        android:background="@drawable/white_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/comment_padding_left"
+        android:paddingRight="@dimen/comment_padding_right" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="声音"
+            android:textSize="@dimen/text_big" />
+
+        <CheckBox
+            android:id="@+id/option_message_cb_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/option_message_ll_vibration"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/comment_divider_size"
+        android:background="@drawable/white_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/comment_padding_left"
+        android:paddingRight="@dimen/comment_padding_right" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="振动"
+            android:textSize="@dimen/text_big" />
+
+        <CheckBox
+            android:id="@+id/option_message_cb_vibration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/option_message_ll_remind_with_content"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/comment_divider_size"
+        android:background="@drawable/white_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/comment_padding_left"
+        android:paddingRight="@dimen/comment_padding_right" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="提醒时显示消息内容"
+            android:textSize="@dimen/text_big" />
+
+        <CheckBox
+            android:id="@+id/option_message_cb_remind_with_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/option_message_ll_silence_time"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/white_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/comment_padding_left"
+        android:paddingRight="@dimen/comment_padding_right" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="静音时段"
+            android:textSize="@dimen/text_big" />
+
+        <TextView
+            android:id="@+id/option_message_tv_silence_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="23:00-07:00"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text_big" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:src="@mipmap/arrow_right_gray" />
+    </LinearLayout>
+
+</LinearLayout>

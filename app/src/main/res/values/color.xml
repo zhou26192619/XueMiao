@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- text color begin -->
+    <color name="text_green">#00c72a</color>
+    <color name="text_dark_gray">#585858</color>
+    <color name="text_gray">#a9a9a9</color>
+    <color name="text_light_gray">#c0c0c0</color>
+    <color name="text_orange">#ffa92d</color>
+    <color name="text_base_color">#ffffff</color>
+    <color name="text_base_black">#000000</color>
+    <!-- text color end -->
+
+    <color name="white_pressed">#f1f1f1</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#a9a9a9</color>
+    <color name="divider_color">#c8c8cb</color>
+
+    <!-- navigation bar begin -->
+    <color name="nav_bar_text_color">#686868</color>
+    <color name="nav_bar_bg">#ffffff</color>
+    <color name="nav_bar_border">#bbbbbb</color>
+    <!-- navigation bar end -->
+
+    <!-- header begin -->
+    <color name="head_bg">#ffa726</color>
+    <color name="bg">#efefef</color>
+    <color name="head_title_text_color">#ffffff</color>
+    <!-- header end -->
+
+
+    <!-- home begin -->
+    <color name="home_course_schedule_bg">#1e76e2</color>
+    <color name="home_activity_schedule_bg">#00c82a</color>
+    <color name="home_near_organization_bg">#0dc795</color>
+    <color name="home_friend_circle_bg">#ffa626</color>
+    <color name="home_schedule_divider">#40ffffff</color>
+    <color name="home_friend_circle_badge_text_color">#fd6222</color>
+    <!-- home begin -->
+
+
+    <!-- mine begin -->
+    <color name="mine_bg">#efefef</color>
+    <!-- mine end -->
+
+
+    <!-- login begin -->
+    <color name="login_page_bg">#efefef</color>
+    <color name="login_bt_login">#00a222</color>
+    <color name="login_bt_login_pressed">#048a20</color>
+    <color name="login_bt_register">#ff9600</color>
+    <color name="login_bt_register_pressed">#e18501</color>
+    <!-- login end -->
+
+
+    <!-- comment begin -->
+    <color name="comment_bg">#efefef</color>
+    <color name="comment_tag_bg">#ffa626</color>
+    <!-- comment end -->
+
+
+</resources>

@@ -1,0 +1,117 @@
+package cc.xuemiao.ui.view;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map.Entry;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import cc.xuemiao.R;
+
+
+public class NavBarView extends RelativeLayout {
+    public static boolean unConversion = false;
+    public static boolean unApply = false;
+
+    @Bind(R.id.nav_bar_rl_tab0)
+    RelativeLayout homeLayout;
+    @Bind(R.id.msg_layout)
+    RelativeLayout msgLayout;
+    @Bind(R.id.discovery_layout)
+    RelativeLayout discoveryLayout;
+    @Bind(R.id.mine_layout)
+    RelativeLayout mineLayout;
+    @Bind(R.id.course_layout)
+    RelativeLayout courseLayout;
+
+    @Bind(R.id.home_icon)
+    ImageView ivHome;
+    @Bind(R.id.msg_icon)
+    ImageView ivMsg;
+    @Bind(R.id.discovery_icon)
+    ImageView ivDiscovery;
+    @Bind(R.id.mine_icon)
+    ImageView ivMine;
+    @Bind(R.id.course_icon)
+    ImageView ivCourse;
+
+    private static ImageView unread;
+
+    public HashMap<Integer, Integer> resIds = new HashMap<Integer, Integer>();
+    public HashMap<Integer, ImageView> iconViews = new HashMap<Integer, ImageView>();
+
+    public NavBarView(Context context) {
+        super(context, null);
+    }
+
+    public NavBarView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        init(context);
+    }
+
+    private void init(Context context) {
+        View rootView = inflate(context, R.layout.view_nav_bar, this);
+        unread = (ImageView) rootView.findViewById(R.id.unread_msg);
+        ButterKnife.bind(this, rootView);
+        ivHome.setSelected(true);
+        resIds.put(R.id.home_layout, 0);
+        resIds.put(R.id.course_layout, 1);
+        resIds.put(R.id.msg_layout, 2);
+        resIds.put(R.id.discovery_layout, 3);
+        resIds.put(R.id.mine_layout, 4);
+
+        iconViews.put(R.id.home_layout, ivHome);
+        iconViews.put(R.id.course_layout, ivCourse);
+        iconViews.put(R.id.msg_layout, ivMsg);
+        iconViews.put(R.id.discovery_layout, ivDiscovery);
+        iconViews.put(R.id.mine_layout, ivMine);
+    }
+
+    @OnClick({R.id.home_layout, R.id.msg_layout, R.id.discovery_layout, R.id.mine_layout, R.id.course_layout})
+    public void onTabClick(View v) {
+        int id = v.getId();
+        unSelectedAllIcons();
+        iconViews.get(id).setSelected(true);
+        if (onTabChangedCallback != null) {
+            onTabChangedCallback.onTabChanged(v, resIds.get(id));
+        }
+    }
+
+    private void unSelectedAllIcons() {
+        Iterator<Entry<Integer, ImageView>> iter = iconViews.entrySet()
+                .iterator();
+        while (iter.hasNext()) {
+            Entry<Integer, ImageView> entry = (Entry<Integer, ImageView>) iter
+                    .next();
+            ImageView val = entry.getValue();
+            val.setSelected(false);
+        }
+    }
+
+    public static void setUnRead() {
+        if (!unConversion && !unApply) {
+            unread.setVisibility(View.GONE);
+        } else {
+            unread.setVisibility(View.VISIBLE);
+        }
+    }
+
+    private OnTabChangedCallback onTabChangedCallback;
+
+    public void setOnTabChangedCallback(
+            OnTabChangedCallback onTabChangedCallback) {
+        this.onTabChangedCallback = onTabChangedCallback;
+    }
+
+    public interface OnTabChangedCallback {
+        void onTabChanged(View view, int index);
+    }
+
+}

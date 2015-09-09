@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <cc.xuemiao.ui.view.NavBarView
+        android:id="@+id/nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <FrameLayout
+        android:id="@+id/main_fl_0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/nav_bar" >
+    </FrameLayout>
+    
+    <FrameLayout
+        android:id="@+id/main_fl_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/nav_bar" >
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/main_fl_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/nav_bar" >
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/main_fl_3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/nav_bar" >
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/main_fl_4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/nav_bar" >
+    </FrameLayout>
+
+</RelativeLayout>

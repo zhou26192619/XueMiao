@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/common_padding_bottom"
+            android:paddingTop="@dimen/common_padding_top" >
+
+            <ImageView
+                android:id="@+id/course_item_iv_avatar"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="@dimen/comment_padding_left"
+                android:src="@mipmap/logo" />
+
+            <LinearLayout
+                android:id="@+id/course_item_ll_course_info"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/comment_divider_size"
+                android:layout_weight="1"
+                android:background="@drawable/white_selector"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="11dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/course_item_tv_class_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_big_x" />
+
+                    <TextView
+                        android:id="@+id/course_item_tv_teacher_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_green"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/comment_divider_size"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/course_item_ll_class_table"
+                android:layout_width="match_parent"
+                android:layout_height="43.5dp"
+                android:layout_weight="1"
+                android:background="@drawable/white_selector"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/comment_padding_right" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="课程表"
+                    android:textColor="@color/text_green" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@mipmap/arrow_right_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/course_item_ll_evaluation"
+                android:layout_width="match_parent"
+                android:layout_height="43.5dp"
+                android:layout_marginTop="@dimen/comment_divider_size"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/comment_padding_right"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/course_item_tv_evaluation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/text_small" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@mipmap/arrow_right_gray" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/course_item_ll_homework"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/comment_divider_size"
+        android:background="@drawable/white_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/comment_padding_left"
+        android:paddingRight="@dimen/comment_padding_right"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="14dp"
+            android:layout_marginRight="5dp"
+            android:src="@mipmap/address" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="已有作业"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text_big" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:src="@mipmap/arrow_right_gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/course_item_ll_archive"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/comment_divider_size"
+        android:background="@drawable/white_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/comment_padding_left"
+        android:paddingRight="@dimen/comment_padding_right"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="14dp"
+            android:layout_marginRight="5dp"
+            android:src="@mipmap/address" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="个人档案"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text_big" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:src="@mipmap/arrow_right_gray" />
+    </LinearLayout>
+
+</LinearLayout>

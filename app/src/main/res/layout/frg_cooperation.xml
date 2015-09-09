@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/comment_bg">
+
+    <RelativeLayout
+        android:id="@+id/cooperation_rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_h"
+        android:background="@color/head_bg"
+        android:orientation="horizontal"
+        android:paddingLeft="1.5dp"
+        android:paddingRight="1.5dp">
+
+        <TextView
+            android:id="@+id/cooperation_tv_type"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@mipmap/triangle_orange_down"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/comment_padding_left"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_normal" />
+
+        <ImageView
+            android:id="@+id/common_main_head_iv_logo"
+            android:layout_width="60dp"
+            android:layout_height="@dimen/head_h"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/main_logo" />
+
+        <ImageView
+            android:id="@+id/common_main_head_iv_search"
+            android:layout_width="@dimen/head_h"
+            android:layout_height="@dimen/head_h"
+            android:layout_alignParentRight="true"
+            android:padding="13.5dp"
+            android:src="@mipmap/search" />
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/cooperation_iv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cooperation_rl_head"
+        android:background="@android:color/white"
+        android:divider="@drawable/rectangle_organization_divider"
+        android:listSelector="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/cooperation_iv_for_help"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/comment_padding_right" />
+
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/index_new_course_rl_root"
+        android:layout_width="match_parent"
+        android:layout_height="238dp"
+        android:layout_margin="2.5dp"
+        android:background="@drawable/white_selector" >
+
+        <ImageView
+            android:id="@+id/index_new_course_iv_logo"
+            android:layout_width="match_parent"
+            android:layout_height="172dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/index_new_course_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/index_new_course_iv_logo"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="3dp"
+            android:paddingLeft="@dimen/comment_padding_left"
+            android:paddingRight="@dimen/comment_padding_right"
+            android:textColor="@color/text_dark_gray"
+            android:textSize="@dimen/text_normal" />
+
+        <LinearLayout
+            android:id="@+id/index_new_course_ll_org_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/index_new_course_tv_name"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/comment_padding_left"
+            android:paddingRight="@dimen/comment_padding_right" >
+
+            <ImageView
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:layout_marginTop="1dp"
+                android:src="@mipmap/org" />
+
+            <TextView
+                android:id="@+id/index_new_course_tv_org_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/text_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/index_new_course_ll_brief"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/index_new_course_ll_org_name"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/comment_padding_left"
+            android:paddingRight="@dimen/comment_padding_right" >
+
+            <ImageView
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:layout_marginTop="1dp"
+                android:src="@mipmap/introduce" />
+
+            <TextView
+                android:id="@+id/index_new_course_tv_brief"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/text_small" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/index_new_course_iv_type"
+            android:layout_width="78dp"
+            android:layout_height="69dp"
+            android:scaleType="centerCrop" />
+    </RelativeLayout>
+
+</RelativeLayout>

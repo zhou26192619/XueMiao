@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mine_bg"
+    android:orientation="vertical" >
+
+    <cc.xuemiao.ui.view.HeadView
+        android:id="@+id/headView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_h"
+        android:background="@color/head_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/comment_padding"
+        android:paddingLeft="@dimen/comment_padding_left"
+        android:paddingRight="@dimen/comment_padding_right"
+        android:paddingTop="@dimen/comment_padding" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="13dp"
+                android:src="@mipmap/pay_title_icon" />
+
+            <TextView
+                android:id="@+id/pay_tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:text="hhhhhhhh"
+                android:textColor="@color/text_dark_gray"
+                android:textSize="@dimen/text_big" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/pay_tv_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center_vertical"
+            android:text="hhhhhhhh"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text_normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/comment_divider_size"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/comment_padding"
+        android:paddingLeft="@dimen/comment_padding_left"
+        android:paddingRight="@dimen/comment_padding_right"
+        android:paddingTop="@dimen/comment_padding" >
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="支付金额:"
+            android:textColor="@color/text_dark_gray"
+            android:textSize="@dimen/text_big_x" />
+
+        <TextView
+            android:id="@+id/pay_tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/text_big_x" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="元"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/text_big_x" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_divider_block_size"
+        android:padding="@dimen/comment_padding"
+        android:paddingLeft="@dimen/comment_padding_left"
+        android:paddingRight="@dimen/comment_padding_right"
+        android:text="付款方式"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/text_big" />
+
+    <RadioGroup
+        android:id="@+id/pay_rg_chanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/comment_bg"
+        android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/pay_rb_offline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_selector"
+            android:button="@null"
+            android:checked="true"
+            android:drawableLeft="@mipmap/offline"
+            android:drawableRight="@drawable/bg_pay_selector"
+            android:paddingBottom="@dimen/comment_padding"
+            android:paddingLeft="@dimen/comment_padding_left"
+            android:paddingRight="@dimen/comment_padding_right"
+            android:paddingTop="@dimen/comment_padding"
+            android:text="  线下支付"
+            android:textColor="@color/text_dark_gray" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/comment_divider_size"
+            android:background="@color/comment_bg" />
+
+        <RadioButton
+            android:id="@+id/pay_rb_alipay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_selector"
+            android:button="@null"
+            android:drawableLeft="@mipmap/alipay"
+            android:drawableRight="@drawable/bg_pay_selector"
+            android:paddingBottom="@dimen/comment_padding"
+            android:paddingLeft="@dimen/comment_padding_left"
+            android:paddingRight="@dimen/comment_padding_right"
+            android:paddingTop="@dimen/comment_padding"
+            android:text="  支付宝支付"
+            android:textColor="@color/text_dark_gray" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/comment_divider_size"
+            android:background="@color/comment_bg" />
+
+        <RadioButton
+            android:id="@+id/pay_rb_wx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_selector"
+            android:button="@null"
+            android:drawableLeft="@mipmap/wx"
+            android:drawableRight="@drawable/bg_pay_selector"
+            android:paddingBottom="@dimen/comment_padding"
+            android:paddingLeft="@dimen/comment_padding_left"
+            android:paddingRight="@dimen/comment_padding_right"
+            android:paddingTop="@dimen/comment_padding"
+            android:text="  微信支付"
+            android:textColor="@color/text_dark_gray" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/comment_padding_left"
+        android:paddingRight="@dimen/comment_padding_right" >
+
+        <TextView
+            android:id="@+id/pay_tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/gray_rounded_corner_selector"
+            android:gravity="center"
+            android:padding="@dimen/comment_padding"
+            android:text="取  消"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_big_x" />
+
+        <TextView
+            android:id="@+id/pay_tv_submit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/orange_rounded_corner_selector"
+            android:gravity="center"
+            android:padding="@dimen/comment_padding"
+            android:text="确  认"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_big_x" />
+    </LinearLayout>
+
+</LinearLayout>

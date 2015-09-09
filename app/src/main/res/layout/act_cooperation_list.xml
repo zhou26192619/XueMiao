@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/comment_bg"
+    android:orientation="vertical" >
+
+    <cc.xuemiao.ui.view.HeadView
+        android:id="@+id/headView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_h"
+        android:background="@color/head_bg" />
+
+    <LinearLayout
+        android:id="@+id/cooperation_list_ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/common_padding_bottom"
+        android:paddingLeft="@dimen/comment_padding_left"
+        android:paddingRight="@dimen/comment_padding_right"
+        android:paddingTop="@dimen/common_padding_top" >
+
+        <EditText
+            android:id="@+id/cooperation_list_et_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="7dp"
+            android:layout_weight="1"
+            android:background="@drawable/gray_border_rounded_corner"
+            android:hint="请输入问题的关键字"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:textColorHint="#c9c9c9"
+            android:textSize="@dimen/text_normal" />
+
+        <TextView
+            android:id="@+id/cooperation_list_tv_search"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="7dp"
+            android:background="@drawable/orange_rounded_corner_selector"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:hm="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cooperation_list_ptrlv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/rectangle_organization_divider"
+        android:listSelector="@android:color/transparent"
+        hm:ptrHeaderTextAppearance="@style/pull_to_refresh_header_text_dark_style" />
+
+</LinearLayout>

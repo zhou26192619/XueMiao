@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mine_bg"
+    android:orientation="vertical" >
+
+    <cc.xuemiao.ui.view.HeadView
+        android:id="@+id/headView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_h"
+        android:background="@color/head_bg" />
+
+    <EditText
+        android:id="@+id/new_question_et_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/feedback_edit_height"
+        android:layout_marginBottom="@dimen/comment_padding"
+        android:layout_marginTop="@dimen/mine_section_margin_top"
+        android:background="@android:color/white"
+        android:gravity="top|left"
+        android:hint="在此填写您的问题。"
+        android:maxLength="200"
+        android:padding="@dimen/comment_padding"
+        android:textColor="@color/text_gray"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/text_normal" />
+
+    <TextView
+        android:id="@+id/new_question_tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/comment_padding"
+        android:background="@drawable/orange_rounded_corner_selector"
+        android:gravity="center"
+        android:padding="@dimen/comment_padding"
+        android:text="提交"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_big" />
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/comment_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_h"
+        android:background="@color/head_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="1.5dp"
+        android:paddingRight="1.5dp" >
+
+        <ImageView
+            android:id="@+id/common_head_iv_back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:padding="13.5dp"
+            android:src="@mipmap/arrow_left_white" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/qa_list_tv_all"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/white_half_corner_left"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="全部"
+            android:textColor="#00c92a"
+            android:textSize="@dimen/text_normal" />
+
+        <TextView
+            android:id="@+id/qa_list_tv_mine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/white_light_half_corner_right"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="我的"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/text_normal" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/common_head_tv_questions"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="提问"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_big" />
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:hm="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/qa_list_ptrlv_courses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/rectangle_organization_divider"
+        android:listSelector="@android:color/transparent"
+        hm:ptrHeaderTextAppearance="@style/pull_to_refresh_header_text_dark_style" />
+
+</LinearLayout>

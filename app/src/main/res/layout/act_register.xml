@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/register_ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_page_bg"
+    android:orientation="vertical">
+
+    <cc.xuemiao.ui.view.HeadView
+        android:id="@+id/headView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_h"
+        android:background="@color/head_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/comment_padding_left"
+        android:paddingRight="@dimen/comment_padding_right"
+        android:paddingTop="25dp">
+
+        <EditText
+            android:id="@+id/register_et_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_edit_height"
+            android:background="@android:color/white"
+            android:drawableLeft="@mipmap/login_account"
+            android:drawablePadding="@dimen/login_edit_padding"
+            android:gravity="center_vertical"
+            android:hint="昵称(1-10个英文或数字或汉字哦!)"
+            android:padding="@dimen/login_edit_padding"
+            android:singleLine="true"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/login_edit_text_size" />
+
+        <TextView
+            android:id="@+id/register_tv_submit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_bt_login_height"
+            android:layout_marginTop="@dimen/login_edit_bt_vertical_spacing"
+            android:background="@drawable/orange_rounded_corner_selector"
+            android:gravity="center"
+            android:text="提  交"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/login_bt_login_text_size" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cc.xuemiao.ui.view.HeadView
+        android:id="@+id/headView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_h"
+        android:background="@color/head_bg" />
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/near_map_mv_mapview"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="visible" />
+
+</LinearLayout>

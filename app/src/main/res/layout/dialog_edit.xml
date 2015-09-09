@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:background="#00000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/white_corner"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/edit_iv_logo"
+                android:layout_width="26dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/help_each_other" />
+
+            <TextView
+                android:id="@+id/edit_tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="求接送、借物品、问难题？\n只有你想不到，没有家长帮不到的~"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/text_small_x" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edit_et_text"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="#f4f4f4"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="top"
+            android:hint="有事在这儿说~"
+            android:paddingBottom="7dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="7dp"
+            android:textColor="@color/text_dark_gray"
+            android:textColorHint="@color/text_gray"
+            android:textSize="@dimen/text_small" />
+
+        <TextView
+            android:id="@+id/edit_tv_ok"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/orange_straight_corner_selector"
+            android:gravity="center"
+            android:text="就这么愉快的决定了~"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/edit_iv_cancel"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/close" />
+
+</RelativeLayout>

@@ -1,0 +1,264 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/comment_bg"
+    android:orientation="vertical">
+
+    <cc.xuemiao.ui.view.HeadView
+        android:id="@+id/headView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_h"
+        android:background="@color/head_bg" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/personal_info_ll_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:background="@drawable/white_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp"
+                android:paddingLeft="@dimen/comment_padding_left"
+                android:paddingRight="@dimen/comment_padding_right"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="头像"
+                    android:textSize="@dimen/text_big" />
+
+                <ImageView
+                    android:id="@+id/personal_info_iv_avatar"
+                    android:layout_width="51dp"
+                    android:layout_height="51dp"
+                    android:layout_marginLeft="9dp"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="14dp"
+                    android:layout_marginLeft="14dp"
+                    android:src="@mipmap/arrow_right_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/personal_info_ll_account_name"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_marginTop="@dimen/comment_divider_size"
+                android:background="@drawable/white_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp"
+                android:paddingLeft="@dimen/comment_padding_left"
+                android:paddingRight="@dimen/comment_padding_right"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="账号"
+                    android:textSize="@dimen/text_big" />
+
+                <TextView
+                    android:id="@+id/personal_info_tv_account_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/text_big" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="14dp"
+                    android:layout_marginLeft="14dp"
+                    android:src="@mipmap/arrow_right_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/personal_info_ll_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_marginTop="@dimen/comment_divider_size"
+                android:background="@drawable/white_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp"
+                android:paddingLeft="@dimen/comment_padding_left"
+                android:paddingRight="@dimen/comment_padding_right"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="昵称"
+                    android:textSize="@dimen/text_big" />
+
+                <TextView
+                    android:id="@+id/personal_info_tv_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/text_big" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="14dp"
+                    android:layout_marginLeft="14dp"
+                    android:src="@mipmap/arrow_right_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/personal_info_ll_name"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_marginTop="@dimen/common_divider_block_size"
+                android:background="@drawable/white_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp"
+                android:paddingLeft="@dimen/comment_padding_left"
+                android:paddingRight="@dimen/comment_padding_right"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="姓名"
+                    android:textSize="@dimen/text_big" />
+
+                <TextView
+                    android:id="@+id/personal_info_tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/text_big" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="14dp"
+                    android:layout_marginLeft="14dp"
+                    android:src="@mipmap/arrow_right_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/personal_info_ll_gender"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_marginTop="@dimen/comment_divider_size"
+                android:background="@drawable/white_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp"
+                android:paddingLeft="@dimen/comment_padding_left"
+                android:paddingRight="@dimen/comment_padding_right"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="性别"
+                    android:textSize="@dimen/text_big" />
+
+                <TextView
+                    android:id="@+id/personal_info_tv_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/text_big" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="14dp"
+                    android:layout_marginLeft="14dp"
+                    android:src="@mipmap/arrow_right_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/personal_info_ll_age"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_marginTop="@dimen/comment_divider_size"
+                android:background="@drawable/white_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp"
+                android:paddingLeft="@dimen/comment_padding_left"
+                android:paddingRight="@dimen/comment_padding_right"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="年龄"
+                    android:textSize="@dimen/text_big" />
+
+                <TextView
+                    android:id="@+id/personal_info_tv_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/text_big" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="14dp"
+                    android:layout_marginLeft="14dp"
+                    android:src="@mipmap/arrow_right_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/personal_info_ll_address"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_marginTop="@dimen/comment_divider_size"
+                android:background="@drawable/white_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp"
+                android:paddingLeft="@dimen/comment_padding_left"
+                android:paddingRight="@dimen/comment_padding_right"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="地址"
+                    android:textSize="@dimen/text_big" />
+
+                <TextView
+                    android:id="@+id/personal_info_tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/text_big" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="14dp"
+                    android:layout_marginLeft="14dp"
+                    android:src="@mipmap/arrow_right_gray" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

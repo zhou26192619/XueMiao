@@ -1,0 +1,167 @@
+<resources>
+
+    <!-- 通用的尺寸   begin -->
+    <dimen name="comment_corner_radius">5dp</dimen>
+    <dimen name="comment_padding_left">15dp</dimen>
+    <dimen name="comment_padding_right">15dp</dimen>
+    <dimen name="common_padding_top">5dp</dimen>
+    <dimen name="common_padding_bottom">5dp</dimen>
+    <dimen name="comment_divider_size">1dp</dimen>
+    <dimen name="common_divider_block_size">10dp</dimen>
+    <dimen name="common_button_height">45dp</dimen>
+    <dimen name="logo_size_in_item">50dp</dimen>
+    <!-- 通用的尺寸 end -->
+
+
+    <!-- text size begin -->
+    <dimen name="text_small_x">10sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_normal">14sp</dimen>
+    <dimen name="text_big">16sp</dimen>
+    <dimen name="text_big_x">18sp</dimen>
+    <dimen name="text_big_xx">20sp</dimen>
+    <dimen name="text_big_s">25sp</dimen>
+    <!-- text size end -->
+
+
+    <!-- navigation bar begin -->
+    <dimen name="nav_bar_h">58dp</dimen>
+    <dimen name="nav_bar_icon_w">20dp</dimen>
+    <dimen name="nav_bar_text_size">12sp</dimen>
+    <!-- navigation bar end -->
+
+
+    <!-- header begin -->
+    <dimen name="head_h">45dp</dimen>
+    <dimen name="header_title_size">20sp</dimen>
+    <dimen name="header_back_text_size">14sp</dimen>
+    <dimen name="header_text_padding">9dp</dimen>
+    <dimen name="header_title_max_width">216dp</dimen>
+    <!-- header end -->
+
+
+    <!-- home begin -->
+
+    <dimen name="home_layout_margin">6dp</dimen>
+    <dimen name="home_schedule_padding">6dp</dimen>
+    <dimen name="home_schedule_title_text_size">14sp</dimen>
+    <dimen name="home_schedule_plan_time_text_size">16sp</dimen>
+    <dimen name="home_schedule_plan_content_text_size">13sp</dimen>
+    <dimen name="home_schedule_title_margin_top">6dp</dimen>
+    <dimen name="home_schedule_plan_content_margin_top">6dp</dimen>
+    <dimen name="home_near_organization_text_size">20sp</dimen>
+    <dimen name="home_near_organization_text_margin_top">6dp</dimen>
+    <dimen name="home_friend_circle_text_size">20sp</dimen>
+    <dimen name="home_friend_circle_text_margin_top">6dp</dimen>
+    <dimen name="home_friend_circle_badge_text_size">12sp</dimen>
+    <dimen name="home_friend_circle_badge_size">36dp</dimen>
+    <dimen name="home_friend_circle_badge_margin_top">6dp</dimen>
+    <dimen name="home_friend_circle_badge_margin_right">6dp</dimen>
+    <!-- home end -->
+
+
+    <!-- mine begin -->
+    <dimen name="mine_section_height">50dp</dimen>
+    <dimen name="mine_section_padding">9dp</dimen>
+    <dimen name="mine_section_margin_top">6dp</dimen>
+    <dimen name="mine_section_vertical_spacing">3dp</dimen>
+    <dimen name="mine_text_drawable_padding">3dp</dimen>
+    <!-- mine end -->
+
+
+    <!-- login begin -->
+    <dimen name="login_subtitle_text_size">14sp</dimen>
+    <dimen name="login_bt_login_text_size">16sp</dimen>
+    <dimen name="login_bt_register_text_size">14sp</dimen>
+    <dimen name="login_bt_auth_text_size_big">16sp</dimen>
+    <dimen name="login_bt_auth_text_size_small">12sp</dimen>
+    <dimen name="login_subtitle_margin_left">8dp</dimen>
+    <dimen name="login_subtitle_margin_top">24dp</dimen>
+    <dimen name="login_registerinfo_margin_top">5dp</dimen>
+    <dimen name="login_subtitle_margin_bottom">24dp</dimen>
+    <dimen name="login_margin">20dp</dimen>
+    <dimen name="login_user_margin">3dp</dimen>
+    <dimen name="login_vilid_margin">5dp</dimen>
+    <dimen name="login_registerinfo_margin">5dp</dimen>
+    <dimen name="login_edit_vertical_spacing">4dp</dimen>
+    <dimen name="login_edit_height">36dp</dimen>
+    <dimen name="login_registerinfo_height">45dp</dimen>
+    <dimen name="login_edit_padding">6dp</dimen>
+    <dimen name="login_edit_text_size">16sp</dimen>
+    <dimen name="login_bt_login_height">36dp</dimen>
+    <dimen name="login_bt_register_height">36dp</dimen>
+    <dimen name="login_edit_bt_vertical_spacing">15dp</dimen>
+    <dimen name="login_bt_vertical_spacing">6dp</dimen>
+    <dimen name="login_bt_auth_horizontal_spacing">17dp</dimen>
+    <!-- login end -->
+
+
+    <!-- comment begin -->
+    <dimen name="comment_padding">9dp</dimen>
+    <dimen name="comment_text_tag_width">36dp</dimen>
+    <dimen name="comment_big_tag_width">89dp</dimen>
+    <dimen name="comment_big_tag_height">24dp</dimen>
+    <dimen name="comment_small_tag_width">58dp</dimen>
+    <dimen name="comment_small_tag_height">16dp</dimen>
+    <dimen name="comment_big_rating_bar_width">147dp</dimen>
+    <dimen name="comment_big_rating_bar_height">26dp</dimen>
+    <dimen name="comment_small_rating_bar_width">68dp</dimen>
+    <dimen name="comment_small_rating_bar_height">15dp</dimen>
+    <dimen name="comment_rating_star_height">25dp</dimen>
+    <dimen name="comment_rating_star_horizontal_spacing">4dp</dimen>
+    <dimen name="comment_edit_height">167dp</dimen>
+    <!-- comment end -->
+
+
+    <!-- organization list begin -->
+    <dimen name="organization_list_margin_top">9dp</dimen>
+    <dimen name="organization_listitem_height">45dp</dimen>
+    <dimen name="organization_listitem_image_size">26dp</dimen>
+    <dimen name="organization_listitem_padding">6dp</dimen>
+
+    <!-- near list -->
+    <dimen name="near_list_title_size">15sp</dimen>
+
+    <!-- organization list end -->
+
+
+    <!-- course list begin -->
+    <dimen name="course_listitem_padding">9dp</dimen>
+    <!-- course list end -->
+
+
+    <!-- course detail begin -->
+    <dimen name="course_detail_padding">9dp</dimen>
+    <dimen name="course_detail_tag_horizontal_spacing">9dp</dimen>
+    <dimen name="course_detail_tag_vertical_spacing">6dp</dimen>
+    <dimen name="course_detail_list_margin_top">9dp</dimen>
+    <dimen name="course_detail_comment_item_padding">9dp</dimen>
+    <!-- course detail end -->
+
+
+    <!-- feedback begin -->
+    <dimen name="feedback_edit_height">180dp</dimen>
+    <!-- feedback end -->
+
+
+    <!-- msg -->
+    <dimen name="height_top_bar">46dp</dimen>
+    <dimen name="padding_search_bar">5dp</dimen>
+    <dimen name="height_row_weixin">59dp</dimen>
+    <dimen name="size_avatar">50dp</dimen>
+    <dimen name="margin_chat_activity">5dp</dimen>
+    <dimen name="margin_chat_label_activity">14dp</dimen>
+    <dimen name="margin_chat_row_activity">5dp</dimen>
+    <dimen name="field_textsize">14sp</dimen>
+    <dimen name="field_margin_right">5dp</dimen>
+    <dimen name="call_button_padding_vertical">10dp</dimen>
+    <dimen name="call_button_padding_left">25dp</dimen>
+    <dimen name="call_button_padding_right">25dp</dimen>
+    <dimen name="sidebar_text_size">10dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="image_thumbnail_size">100dp</dimen>
+    <dimen name="image_thumbnail_spacing">1dp</dimen>
+    <!-- msg -->
+
+</resources>
