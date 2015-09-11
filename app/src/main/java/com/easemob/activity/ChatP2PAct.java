@@ -1,6 +1,7 @@
 package com.easemob.activity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -8,6 +9,7 @@ import android.widget.TextView;
 
 import com.easemob.EMCallBack;
 import com.easemob.adapter.ChatAdapter;
+import com.easemob.api.HMApiChat;
 import com.easemob.chat.EMChatManager;
 import com.easemob.chat.EMConversation;
 import com.easemob.chat.EMMessage;
@@ -19,6 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
+import butterknife.OnClick;
 import cc.xuemiao.R;
 import cc.xuemiao.ui.HMBaseAct;
 
@@ -43,23 +46,25 @@ public class ChatP2PAct extends HMBaseAct {
     private String username;
     private String content;
     private ChatAdapter adapter;
-    private List<EMMessage> messages=new ArrayList<EMMessage>();
+    private List<EMMessage> messages = new ArrayList<EMMessage>();
     private EMMessage message;
+    private android.os.Handler handler=new Handler();
 
     @Override
     protected void onCreate(Bundle arg0) {
         super.onCreate(arg0);
-        setContentViews(R.layout.act_set_name);
+        setContentViews(R.layout.chat_act_p2p);
         init();
     }
 
     @Override
     public void dealIntent(Bundle bundle) {
         super.dealIntent(bundle);
-        username = bundle.getString(BUNDLE_KEY_USER_NAME, "");
+        username = bundle.getString(BUNDLE_KEY_USER_NAME, "学苗小微");
     }
 
     private void init() {
+        username = "58";
         hvHeadView.setTitle(username);
         adapter = new ChatAdapter(this, messages);
         lvRecord.setAdapter(adapter);
@@ -71,13 +76,13 @@ public class ChatP2PAct extends HMBaseAct {
 
     }
 
+    @OnClick(R.id.chat_p2p_tv_send)
     public void onSend(View view) {
         content = etContent.getText().toString();
         if (StringUtil.isEmpty(content)) {
             ToastUtil.toastAlways(this, "还没写什么呢!");
             return;
         }
-
         //获取到与聊天人的会话对象。参数username为聊天人的userid或者groupid，后文中的username皆是如此
         EMConversation conversation = EMChatManager.getInstance().getConversation(username);
         //创建一条文本消息
@@ -95,14 +100,27 @@ public class ChatP2PAct extends HMBaseAct {
         EMChatManager.getInstance().sendMessage(message, new EMCallBack() {
             @Override
             public void onSuccess() {
-                etContent.setText(null);
-                messages.add(message);
-                adapter.setDatas(messages);
+                handler.post(new Runnable() {
+
+                    @Override
+                    public void run() {
+                        etContent.setText(null);
+                        messages.add(message);
+                        adapter.setDatas(messages);
+                    }
+                });
+
             }
 
             @Override
-            public void onError(int i, String s) {
-                ToastUtil.toastAlways(ChatP2PAct.this, s);
+            public void onError(int i, final String s) {
+                handler.post(new Runnable() {
+
+                    @Override
+                    public void run() {
+                        ToastUtil.toastAlways(ChatP2PAct.this, s);
+                    }
+                });
             }
 
             @Override

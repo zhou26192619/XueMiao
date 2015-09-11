@@ -1,5 +1,7 @@
 package com.easemob.api;
 
+import android.content.Context;
+
 import com.easemob.EMCallBack;
 import com.easemob.EMError;
 import com.easemob.activity.MakeFrientsAct;
@@ -16,30 +18,31 @@ import cc.xuemiao.api.HMApi;
 import cc.xuemiao.ui.HMBaseAct;
 
 public class HMApiChat extends HMApi {
-    public static  final String REGISTER = HOST_CHAT
+    public static final String REGISTER = HOST_CHAT
             + "webapi/children/addChild";
-    public static  final String LOGIN = HOST_CHAT
+    public static final String LOGIN = HOST_CHAT
             + "webapi/children/addChild";
-    public static  final String LOGOUT = HOST_CHAT
+    public static final String LOGOUT = HOST_CHAT
             + "webapi/children/addChild";
-    public static  final String SEND_MSG = HOST_CHAT
+    public static final String SEND_MSG = HOST_CHAT
             + "webapi/children/addChild";
-    public static  final String FIND_USER = HOST_CHAT
+    public static final String FIND_USER = HOST_CHAT
             + "webapi/children/addChild";
 
     public static HMApiChat getInstance() {
+        EMChatManager.getInstance().getChatOptions().setUseRoster(true);
         return new HMApiChat();
     }
 
-    public void login(HMBaseAct act,
-                          String userName, String pwd) {
+    public void login(Context act,
+                      String userName, String pwd) {
         pwd = "123456";
         EMChatManager.getInstance().login(userName, pwd, new EMCallBack() {//回调
             @Override
             public void onSuccess() {
                 EMGroupManager.getInstance().loadAllGroups();
                 EMChatManager.getInstance().loadAllConversations();
-                ToastUtil.log("HMApiChat", "登陆聊天服务器成功！");
+                ToastUtil.log("HMApiChatlogin", "登陆聊天服务器成功！");
             }
 
             @Override
@@ -49,13 +52,13 @@ public class HMApiChat extends HMApi {
 
             @Override
             public void onError(int code, String message) {
-                ToastUtil.log("HMApiChat", "登陆聊天服务器失败！");
+                ToastUtil.log("HMApiChatlogin", code + "登陆聊天服务器失败！"+message);
             }
         });
     }
 
     public void register(HMBaseAct act,
-                             String username, String pwd) {
+                         String username, String pwd) {
         try {
             pwd = "123456";
             EMChatManager.getInstance().createAccountOnServer(username, pwd);
@@ -74,7 +77,7 @@ public class HMApiChat extends HMApi {
     }
 
     public void logout(HMBaseAct act,
-                           RequestParams params) {
+                       RequestParams params) {
         EMChatManager.getInstance().logout();//此方法为同步方法
     }
 
@@ -86,8 +89,30 @@ public class HMApiChat extends HMApi {
         EMChatManager.getInstance().updateCurrentUserNick(nickname);
     }
 
-    public void addContact(String addUsername,String reason) throws EaseMobException {
-        EMContactManager.getInstance().addContact(addUsername,reason);//需异步执行
+    public void addContact(String username, String reason) throws EaseMobException {
+        EMContactManager.getInstance().addContact(username, reason);//需异步执行
     }
+
+    public void deleteContact(String username) throws EaseMobException {
+        EMContactManager.getInstance().deleteContact(username);//需异步处理
+    }
+
+    public void acceptInvitation(String username) throws EaseMobException {
+        EMChatManager.getInstance().acceptInvitation(username);//需异步处理
+    }
+
+    public void refuseInvitation(String username) throws EaseMobException {
+        EMChatManager.getInstance().refuseInvitation(username);//需异步处理
+    }
+
+    public List<String> userList(){
+        try {
+            return EMContactManager.getInstance().getContactUserNames();
+        } catch (EaseMobException e) {
+            ToastUtil.log("HMApiChat", e.getMessage());
+        }
+        return null;
+    }
+
 
 }

@@ -34,11 +34,11 @@ public class BaseApp extends Application {
     }
 
     public void saveUser(final UserBean userBean) {
-        user = userBean;
         new Thread(new Runnable() {
             @Override
             public void run() {
                 getUserSP().saveUserBean(userBean);
+                user = userBean;
             }
         }).start();
     }

@@ -1,4 +1,4 @@
-package com.easemob.applib.model;
+package com.easemob.model;
 
 import com.easemob.EMGroupChangeListener;
 

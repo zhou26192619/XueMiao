@@ -109,7 +109,7 @@ public class HMLoginAct extends HMBaseAct {
                     jo.getAsJsonObject(HMApi.KEY_DATA), HMUserBean.class);
             userBean.setPassword(password);
 
-            HMApiChat.getInstance().postLogin(this, userBean.getId(), password);
+            HMApiChat.getInstance().login(this, userBean.getId(), password);
 
             ((HMApp) getApplication()).getUserSP().saveUserBean(userBean);
             ((HMApp) getApplication()).updateActivities();

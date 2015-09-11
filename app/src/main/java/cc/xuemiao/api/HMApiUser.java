@@ -1,5 +1,6 @@
 package cc.xuemiao.api;
 
+import com.easemob.api.HMApiChat;
 import com.google.gson.JsonObject;
 import com.lib_common.net.HttpJsonCallback;
 import com.lib_common.net.HttpRequestUtils;
@@ -39,11 +40,7 @@ public class HMApiUser extends HMApi {
         postRequest(act, LOGIN, params);
     }
 
-    public void postLoginOnBack(final HMApp app) {
-        final HMUserBean user = app.getUserSP().getUserBean(HMUserBean.class);
-        if (user != null) {
-            return;
-        }
+    public void postLoginOnBack(final HMApp app, final HMUserBean user) {
         RequestParams params = new RequestParams();
         params.put("accountName", user.getAccountName());
         params.put("password", user.getPassword());
@@ -60,14 +57,7 @@ public class HMApiUser extends HMApi {
                     userBean.setPassword(user.getPassword());
                     app.saveUser(userBean);
                     app.updateActivities();
-
-//                    if (HMHXSDKHelper.getInstance().isLogined()) {
-//                        // ** 免登陆情况 加载所有本地群和会话
-//                        //不是必须的，不加sdk也会自动异步去加载(不会重复加载)；
-//                        //加上的话保证进了主页面会话和群组都已经load完毕
-//                        EMGroupManager.getInstance().loadAllGroups();
-//                        EMChatManager.getInstance().loadAllConversations();
-//                    }
+                    HMApiChat.getInstance().login(app,"1","");
                 }
             }
         });

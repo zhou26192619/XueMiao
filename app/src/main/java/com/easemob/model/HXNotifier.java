@@ -9,7 +9,11 @@
  * is strictly forbidden unless prior written permission is obtained
  * from EaseMob Technologies.
  */
-package com.easemob.applib.model;
+package com.easemob.model;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -27,14 +31,9 @@ import android.support.v4.app.NotificationCompat;
 
 import com.easemob.chat.EMChatManager;
 import com.easemob.chat.EMMessage;
+import com.easemob.helper.HXSDKHelper;
 import com.easemob.util.EMLog;
 import com.easemob.util.EasyUtils;
-
-import java.util.HashSet;
-import java.util.List;
-import java.util.Locale;
-
-import com.easemob.applib.controller.HXSDKHelper;
 
 /**
  * 新消息提醒class
@@ -291,7 +290,7 @@ public class HXNotifier {
                 return;
             } 
         }
-
+        
         HXSDKModel model = HXSDKHelper.getInstance().getModel();
         if(!model.getSettingMsgNotification()){
             return;

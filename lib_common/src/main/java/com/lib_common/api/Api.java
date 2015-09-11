@@ -1,7 +1,6 @@
 package com.lib_common.api;
 
 import com.google.gson.JsonObject;
-import com.lib_common.activity.BaseActivity;
 import com.lib_common.fragment.BaseFragment;
 import com.lib_common.net.HttpJsonCallback;
 import com.lib_common.net.HttpRequestUtils;
@@ -11,8 +10,8 @@ import com.loopj.android.http.RequestParams;
 import org.apache.http.Header;
 
 public class Api {
-    //	 public static final String HOST = "http://www.xuemiao.cc/";
-    public static final String HOST = "http://115.29.207.3:8080/HeMiao/";
+    public static final String HOST = "http://www.xuemiao.cc/XueMiao-Api/";
+//    public static final String HOST = "http://115.29.207.3:8080/HeMiao/";
 //	 public static final String HOST = "http://192.168.199.170:8080/HeMiao/";
 
     public static final String HOST_VERSION = HOST;
@@ -35,11 +34,7 @@ public class Api {
     // ********************
 
     public static boolean checkRes(JsonObject obj) {
-        if (STATUS_OK.equals(obj.getAsJsonPrimitive(KEY_STATUS).getAsString())) {
-            return true;
-        } else {
-            return false;
-        }
+        return STATUS_OK.equals(obj.getAsJsonPrimitive(KEY_STATUS).getAsString());
     }
 
     /**
@@ -105,7 +100,7 @@ public class Api {
 
     public void getRequest(final BaseFragment bf, final String url,
                            RequestParams params) {
-        HttpRequestUtils.get(bf.getActivity(), url, params,
+        HttpRequestUtils.get(bf.getContext(), url, params,
                 new HttpJsonCallback() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers,

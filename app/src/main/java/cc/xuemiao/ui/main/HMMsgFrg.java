@@ -19,13 +19,19 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.easemob.activity.ChatIndexView;
+import com.easemob.activity.frg.IndexContactsFrg;
+import com.easemob.activity.frg.IndexGroupsFrg;
+import com.easemob.activity.frg.IndexSessionsFrg;
 import com.lib_common.util.ToastUtil;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.Bind;
 import cc.xuemiao.R;
 import cc.xuemiao.ui.HMBaseFragment;
 
-public class HMMsgFrg extends HMBaseFragment{
+public class HMMsgFrg extends HMBaseFragment {
 
     protected static final String TAG = "HMMsgFrg";
 

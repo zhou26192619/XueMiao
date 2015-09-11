@@ -196,6 +196,11 @@
             android:name="com.easemob.activity.ChatP2PAct"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide">
+        </activity>
+        <activity
+            android:name="com.easemob.activity.MakeFrientsAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

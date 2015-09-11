@@ -100,9 +100,17 @@
         </RelativeLayout>
     </LinearLayout>
 
-    <RelativeLayout
+    <EditText
+        android:id="@+id/chat_index_et_search"
+        android:layout_width="match_parent"
+        android:focusable="true"
+        android:layout_height="50dp" />
+
+    <ListView
         android:id="@+id/chat_index_rl_container"
         android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:background="#348293"
         android:layout_height="match_parent" />
 
 </LinearLayout>

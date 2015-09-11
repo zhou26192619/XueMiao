@@ -7,14 +7,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
 
 import com.google.gson.JsonObject;
 import com.lib_common.observer.ActivityObserver;
 
 import org.apache.http.Header;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public abstract class BaseFragment extends Fragment implements ActivityObserver {
@@ -93,7 +91,7 @@ public abstract class BaseFragment extends Fragment implements ActivityObserver 
 
     @Override
     public Context getContext() {
-        return getActivity();
+        return getContext();
     }
 
     private boolean isRequesting;

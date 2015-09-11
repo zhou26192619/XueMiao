@@ -1,6 +1,5 @@
 package cc.xuemiao.ui.welcome;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
@@ -8,9 +7,6 @@ import android.view.KeyEvent;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.easemob.chat.EMChatManager;
-import com.easemob.chat.EMGroupManager;
-import com.easemob.helper.HMHXSDKHelper;
 import com.lib_common.bean.DeviceInfoBean;
 import com.lib_common.config.BaseConfig;
 import com.lib_common.util.CommonToolsUtil;

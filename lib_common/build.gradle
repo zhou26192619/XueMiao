@@ -33,16 +33,12 @@ dependencies {
     compile 'com.github.chrisbanes.photoview:library:1.2.3'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile files('libs/AndroidSwipeLayout-v1.1.8.jar')
-    compile files('libs/universal-image-loader-1.9.3-javadoc.jar')
     compile 'com.android.support:support-v4:22.1.1'
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
-    compile 'com.loopj.android:android-async-http:1.4.8'
     compile 'com.makeramen:roundedimageview:2.2.0'
+    compile 'com.loopj.android:android-async-http:1.4.8'
 }
 
-task clearJar(type: Delete) {
-    delete 'build/outputs/lib_common.jar'
-}
 
 task makeJar(type: Copy) {
     from('build/intermediates/bundles/release/')
@@ -51,4 +47,8 @@ task makeJar(type: Copy) {
     rename ('classes.jar', 'lib_common.jar')
 }
 
-makeJar.dependsOn(clearJar, build)
+//task clearJar(type: Delete) {
+//    delete 'build/outputs/lib_common.jar'
+//}
+
+//makeJar.dependsOn(clearJar, build)

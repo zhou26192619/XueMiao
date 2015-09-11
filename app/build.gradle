@@ -44,8 +44,20 @@ dependencies {
     compile(name: 'libone', ext: 'aar')
     compile(name: 'libpingpp', ext: 'aar')
     compile(name: 'bdwallet_pay_sdk', ext: 'aar')
-    compile files('libs/easemobchat_2.2.2.jar')
     compile 'com.parse:parse-android:1.10.1'
+    compile files('libs/umeng-analytics-v5.5.3.jar')
+    compile files('libs/MobTools.jar')
+    compile files('libs/ShareSDK-Core-2.6.0.jar')
+    compile files('libs/ShareSDK-QQ-2.6.0.jar')
+    compile files('libs/ShareSDK-QZone-2.6.0.jar')
+    compile files('libs/ShareSDK-ShortMessage-2.6.0.jar')
+    compile files('libs/ShareSDK-SinaWeibo-2.6.0.jar')
+    compile files('libs/ShareSDK-Wechat-2.6.0.jar')
+    compile files('libs/ShareSDK-Wechat-Core-2.6.0.jar')
+    compile files('libs/ShareSDK-Wechat-Favorite-2.6.0.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-2.6.0.jar')
+    compile files('libs/umeng-analytics-v5.5.3.jar')
+    compile files('libs/easemobchat_2.2.2.jar')
 }
 repositories {
     flatDir {

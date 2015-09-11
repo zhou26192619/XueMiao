@@ -109,15 +109,14 @@
     <orderEntry type="library" exported="" name="ShareSDK-TencentWeibo-2.6.0" level="project" />
     <orderEntry type="library" exported="" name="ShareSDK-SinaWeibo-2.6.0" level="project" />
     <orderEntry type="library" exported="" name="ShareSDK-ShortMessage-2.6.0" level="project" />
+    <orderEntry type="library" exported="" name="ShareSDK-Wechat-Moments-2.6.0" level="project" />
     <orderEntry type="library" exported="" name="butterknife-7.0.1" level="project" />
     <orderEntry type="library" exported="" name="gson-2.2.4" level="project" />
-    <orderEntry type="library" exported="" name="ShareSDK-Wechat-Moments-2.6.0" level="project" />
     <orderEntry type="library" exported="" name="bolts-android-1.2.1" level="project" />
     <orderEntry type="library" exported="" name="libone-" level="project" />
     <orderEntry type="library" exported="" name="ShareSDK-Wechat-Core-2.6.0" level="project" />
-    <orderEntry type="library" exported="" name="easemobchat_2.1.9" level="project" />
-    <orderEntry type="library" exported="" name="android-async-http-1.4.8" level="project" />
     <orderEntry type="library" exported="" name="AMap_Services_V2.5.0" level="project" />
+    <orderEntry type="library" exported="" name="android-async-http-1.4.8" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-22.1.1" level="project" />
     <orderEntry type="library" exported="" name="ShareSDK-Yixin-Core-2.6.0" level="project" />
     <orderEntry type="library" exported="" name="umeng-analytics-v5.5.3" level="project" />
@@ -127,7 +126,6 @@
     <orderEntry type="library" exported="" name="Android_2DMapApi_V2.5.0" level="project" />
     <orderEntry type="library" exported="" name="ShareSDK-Yixin-Moments-2.6.0" level="project" />
     <orderEntry type="library" exported="" name="support-v4-22.1.1" level="project" />
-    <orderEntry type="library" exported="" name="picasso-2.4.0" level="project" />
     <orderEntry type="library" exported="" name="ShareSDK-Yixin-2.6.0" level="project" />
     <orderEntry type="library" exported="" name="Android_Location_V1.3.3" level="project" />
     <orderEntry type="module" module-name="lib_common" exported="" />

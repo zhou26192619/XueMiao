@@ -2,11 +2,9 @@ package com.lib_common.observer;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.preference.PreferenceActivity;
 
 import com.google.gson.JsonObject;
-
-import android.os.Handler;
-
 import org.apache.http.Header;
 
 /**
@@ -46,7 +44,7 @@ public interface ActivityObserver {
      * @param headers
      * @param jo
      */
-    void setRequestSuc(String url, int statusCode, Header[] headers,
+    void setRequestSuc(String url, int statusCode,Header[] headers,
                        JsonObject jo);
 
     /**

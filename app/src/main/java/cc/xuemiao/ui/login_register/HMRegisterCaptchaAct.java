@@ -186,17 +186,18 @@ public class HMRegisterCaptchaAct extends HMBaseAct {
             HMUserBean userbean = GsonUtil.fromJsonObj(
                     jo.getAsJsonObject(HMApiUser.KEY_DATA),
                     HMUserBean.class);
+            userbean.setPassword(password);
             ((HMApp) getApplication()).getUserSP()
                     .saveUserBean(userbean);
 
             // 聊天系统注册
-            HMApiChat.getInstance().postRegister(this, phone, password);
+            HMApiChat.getInstance().register(this, phone, password);
 
             // 成功后默认登录
             RequestParams params = new RequestParams();
             params.put("accountName", phone);
             params.put("password", password);
-            HMApiUser.getInstance().postLoginOnBack(((HMApp) getApplication()));
+            HMApiUser.getInstance().postLoginOnBack(((HMApp) getApplication()),userbean);
 
             HMNavUtil.goToNewAct(this,
                     HMRegisterInfoAct.class);

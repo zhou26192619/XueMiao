@@ -20,14 +20,12 @@ import cc.xuemiao.api.HMApiParent;
 import cc.xuemiao.ui.HMBaseAct;
 
 /**
- * 设置姓名、名字
+ * 添加好友
  *
  * @author loar
  */
 public class MakeFrientsAct extends HMBaseAct {
 
-    @Bind(R.id.set_name_et_name)
-    EditText etName;
 
     private String toAddUsername;
     private String reason;
@@ -35,7 +33,7 @@ public class MakeFrientsAct extends HMBaseAct {
     @Override
     protected void onCreate(Bundle arg0) {
         super.onCreate(arg0);
-        setContentViews(R.layout.act_set_name);
+        setContentViews(R.layout.chat_act_make_friends);
         init();
         setListener();
     }

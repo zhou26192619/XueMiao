@@ -141,7 +141,7 @@ public class ChatAdapter extends BaseAdapter {
     @Override
     public int getItemViewType(int position) {
         if (user == null) {
-            user = HMApp.getInstance().getUser();
+            user = HMApp.getInstance().getUserSP().getUserBean(HMUserBean.class);
             if (user == null) {
                 return TYPE_LEFT;
             }

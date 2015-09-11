@@ -16,11 +16,14 @@
         android:id="@+id/chat_p2p_lv_record"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:transcriptMode="alwaysScroll"
+        android:divider="@null"
         android:layout_weight="1" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/head_h"
+        android:background="@android:color/white"
         android:orientation="horizontal">
 
         <EditText
